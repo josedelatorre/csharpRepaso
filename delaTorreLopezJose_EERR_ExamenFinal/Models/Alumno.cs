@@ -9,12 +9,14 @@ namespace delaTorreLopezJose_EERR_ExamenFinal.Models
     class Alumno : Persona
     {
         public string NMatricula { get; set; }
+        private float _Nota;
+
         public float Nota {
-            get => Nota;
+            get => _Nota;
             set {
                 if (value < 0 || value > 10)
                     throw new Exception("Nota fuera de rango");
-                Nota = value;
+                _Nota = Nota;
             }
         }
 
@@ -23,7 +25,7 @@ namespace delaTorreLopezJose_EERR_ExamenFinal.Models
             base(Nombre, Apellidos, edad)
         {
             this.NMatricula = NMatricula;
-            this.Nota = 0;
+            Nota = 0;
         }
 
         public Alumno(string Nombre, string Apellidos, int edad, 

@@ -11,9 +11,10 @@ namespace delaTorreLopezJose_EERR_ExamenFinal.Models
         public Profesor Profe { get; set; }
         public IList<Alumno> Alumnos { get; set; }
 
-        public Clase()
+        public Clase(List<Alumno> a, Profesor p)
         {
-            Alumnos = new List<Alumno>();
+            Alumnos = a;
+            Profe = p;
         }
 
         public float CalcularMedia()
@@ -22,6 +23,9 @@ namespace delaTorreLopezJose_EERR_ExamenFinal.Models
         }
 
         public void EvaluarTodos() {
+            if (Profe == null || Alumnos == null) {
+                throw new Exception("Primero configura la clase!");
+            }
             Console.WriteLine("-EVALUANDO-");
             foreach (var a in Alumnos) {
                 var nota = LeerNota(a);
