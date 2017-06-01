@@ -12,8 +12,9 @@ namespace delaTorreLopezJose_EERR_ExamenFinal.Models
         public float Nota {
             get => Nota;
             set {
-                if (Nota < 0 || Nota > 10)
+                if (value < 0 || value > 10)
                     throw new Exception("Nota fuera de rango");
+                Nota = value;
             }
         }
 

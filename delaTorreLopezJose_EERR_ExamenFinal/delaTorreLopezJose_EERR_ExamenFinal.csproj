@@ -46,6 +46,7 @@
     <Compile Include="Interfaces\ISaludable.cs" />
     <Compile Include="Main\Program.cs" />
     <Compile Include="Models\Alumno.cs" />
+    <Compile Include="Models\Clase.cs" />
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\Profesor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
