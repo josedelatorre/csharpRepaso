@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IEvaluador.cs" />
     <Compile Include="Interfaces\ISaludable.cs" />
     <Compile Include="Main\Program.cs" />
     <Compile Include="Models\Alumno.cs" />

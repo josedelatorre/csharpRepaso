@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using delaTorreLopezJose_EERR_ExamenFinal.Interfaces;
 
 namespace delaTorreLopezJose_EERR_ExamenFinal.Models
 {
-    class Profesor : Persona
+    class Profesor : Persona, IEvaluador
     {
         public float Sueldo {
             get => Sueldo;
@@ -16,6 +17,18 @@ namespace delaTorreLopezJose_EERR_ExamenFinal.Models
 
                 Sueldo = value;
             }
+        }
+
+        public Profesor(string Nombre, string Apellidos, int edad,
+           float Sueldo) :
+            base(Nombre, Apellidos, edad)
+        {
+            this.Sueldo = Sueldo;
+        }
+
+        public void Evaluar(Alumno a, float nota)
+        {
+            a.Nota = nota;
         }
 
         public void Regañar(string msg)

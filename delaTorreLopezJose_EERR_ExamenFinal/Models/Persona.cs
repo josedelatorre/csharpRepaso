@@ -13,6 +13,14 @@ namespace delaTorreLopezJose_EERR_ExamenFinal.Models
         public string Apellidos { get; set; }
         private int edad;
 
+        public Persona(string Nombre, string Apellidos, int edad)
+        {
+            this.Nombre = Nombre;
+            this.Apellidos = Apellidos;
+            this.edad = edad;
+        }
+
+        //Getters y setters como en Java
         public int getEdad() {
             return edad;
         }
